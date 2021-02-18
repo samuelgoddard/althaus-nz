@@ -1,0 +1,186 @@
+* {margin:0 }
+
+body {
+	margin: 0;
+	padding: 0;
+	/* overscroll-behavior: none; */
+}
+
+a {
+	@apply transition duration-300;
+}
+
+[class*='transition'] {
+	@apply duration-300;
+}
+
+.border-b-0-forced {
+	@screen md {
+		border-bottom: 0 !important;
+	}
+}
+
+.gradient-ltr {
+	background: rgb(44,53,128);
+	background: linear-gradient(275deg, rgba(49,53,130,1) 0%, rgba(236,67,98,1) 100%);
+}
+
+.fixed-text-left {
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	top: 35%;
+	left: 0;
+}
+
+.fixed-text-right {
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	top: 31%;
+	right: 0;
+}
+
+.logo-bg {
+	margin-left: -100vw;
+	margin-top: -15vw;
+	width: 250vw;
+
+	@screen md {
+		margin-left: -450px;
+		margin-top: -190px;
+		width: 1150px;
+	}
+
+	@screen lg {
+		margin-left: -600px;
+		margin-top: -315px;
+		width: 1700px;
+	}
+
+	@screen xl {
+		margin-left: -650px;
+		margin-top: -325px;
+		width: 1950px;
+	}
+}
+
+.bleed-left {
+	margin-left: -43% !important;
+}
+
+.bleed-right {
+	margin-right: -43% !important;
+}
+
+.bleed-right--large {
+	margin-right: -45% !important;
+}
+
+.viewport {
+	overflow: hidden !important;
+} 
+
+.bg-multiply {
+	mix-blend-mode: multiply;
+}
+
+.btn-arrow__arrow {
+	transition: all ease 250ms;
+}
+
+.btn-arrow {
+	&:hover, &:focus {
+		.btn-arrow__arrow {
+			transform: translate(5px);
+		}
+	}
+}
+
+.rotate, .pulse {
+	transform-origin: 55.5% 57.5%;
+}
+
+.rotate-center {
+	transform-origin: 51.5% 51.5%;
+}
+
+.rotate-center {
+	animation: rotating 2s linear infinite;
+}
+
+.animated-icon-wrapper {
+	svg {
+		@apply block h-12;
+
+		@screen md {
+			@apply h-16
+		}
+	}
+}
+.animated-icon {
+	&:hover {
+		.rotate {
+			animation: rotating 2s linear infinite;
+		}
+
+		.pulse {
+			animation: pulse 1s linear infinite;
+		}
+		
+		.rotate-center {
+			animation: rotating 2s linear infinite;
+		}
+	}
+}
+
+@keyframes rotating {
+	from {
+	  -ms-transform: rotate(0deg);
+	  -moz-transform: rotate(0deg);
+	  -webkit-transform: rotate(0deg);
+	  -o-transform: rotate(0deg);
+	  transform: rotate(0deg);
+	}
+	to {
+	  -ms-transform: rotate(360deg);
+	  -moz-transform: rotate(360deg);
+	  -webkit-transform: rotate(360deg);
+	  -o-transform: rotate(360deg);
+	  transform: rotate(360deg);
+	}
+  }
+
+@keyframes pulse {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0
+	}
+	
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes sway {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	25% {
+		transform: rotate(-20deg);
+	}
+
+	50% {
+		transform: rotate(0deg);
+	}
+
+	75% {
+		transform: rotate(20deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}

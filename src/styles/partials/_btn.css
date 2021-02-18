@@ -1,0 +1,47 @@
+.btn {
+    @apply text-base text-white bg-purple-light p-3 px-5 text-center uppercase font-semibold relative transition ease-in-out duration-300;
+
+    &:after {
+        content: ' ';
+        transition: all ease-in-out 500ms;
+        @apply absolute top-0 left-0 bottom-0 right-0 w-0 bg-purple-dark z-10;
+    }
+
+    &:hover, &:focus {
+        &:after {
+            @apply w-full;
+        }
+    }
+}
+
+.btn__inner {
+    @apply relative z-20;
+}
+
+.btn--pink {
+    @apply bg-pink;
+
+    &:after {
+        @apply bg-pink-dark;
+    }
+}
+
+.btn--border {
+    @apply border-2 border-pink bg-transparent;
+    
+    &:after {
+        @apply bg-pink;
+    }
+}
+
+.btn--sideways {
+    &:after {
+        @apply w-full h-0;
+    }
+
+    &:hover, &:focus {
+        &:after {
+            @apply h-full;
+        }
+    }
+}

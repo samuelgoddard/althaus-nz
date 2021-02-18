@@ -1,0 +1,40 @@
+/* Local Fonts */
+@import './partials/_fonts.css';
+
+/* Minor resets */
+@import './partials/_base.css';
+
+/* Tailwind Base + Components */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Custom Partials */
+@import './partials/_btn.css';
+@import './partials/_container.css';
+@import './partials/_typography.css';
+@import './partials/_navigation.css';
+
+/* Tailwind Utils */
+@import 'tailwindcss/utilities';
+
+.hero__bullets {
+    > ul {
+        @apply list-disc list-inside;
+
+        li {
+            @apply mb-3;
+        }
+    }
+}
+
+.video {
+    height: 400px;
+    
+    @screen md {
+        height: 500px;
+    }
+    
+    @screen xl {
+        height: 700px;
+    }
+}
