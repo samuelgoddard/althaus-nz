@@ -7,6 +7,7 @@ import Arrow from "../images/arrow.inline.svg";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import Img from "gatsby-image";
 import gsap from "gsap";
+import { RevealLeft } from "../components/revealHelpers"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 if (typeof window !== `undefined`) {
@@ -65,14 +66,9 @@ class IndexPage extends React.Component {
 
                         <div className="flex flex-wrap">
                           <AnchorLink to={`#video`} title={"Our Vision Video"} className="block mr-5 relative z-10 btn mb-4 sm:mb-0">
-                              <span className="block relative z-20">Our NZ Vision</span>
+                              <span className="block relative z-20">Our Vision</span>
                               {/* <span className="block ml-4 w-8 btn-arrow__arrow"><Arrow /></span> */}
                           </AnchorLink>
-
-                          <a href="https://althausdigital.co.uk" rel="noopener noreferrer" target="_blank" className="btn btn--pink relative z-10">
-                            <span className="block relative z-20">Our UK website</span>
-                            {/* <span className="block ml-4 w-8 btn-arrow__arrow"><Arrow /></span> */}
-                          </a>
                         </div>
                       </div>
                     </div>
@@ -88,10 +84,23 @@ class IndexPage extends React.Component {
               </div>
             </section>
 
-            <section className="bg-purple pt-8 md:pt-12 xl:pt-16" id="video">
-              <div className="container lg:px-32">
-                <iframe title="Althaus Vision" width="100%" className="video" src="https://www.youtube.com/embed/7yw6XxU1HhE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <section className="bg-purple pt-0 md:pt-2 xl:pt-4" id="video">
+
+              <div className="bg-purple overflow-hidden relative z-10">
+                <RevealLeft>
+                  <span className="text-8xl lg:text-9xl xl:text-10xl uppercase font-extrabold scroll-text text-transparent">Our Vision</span>
+                </RevealLeft>
               </div>
+              <div className="container lg:px-32 -mt-16 lg:-mt-24 xl:-mt-32 relative z-20">
+                <iframe title="Althaus Vision" width="100%" className="video mb-8 md:mb-12" src="https://www.youtube.com/embed/7yw6XxU1HhE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                <div className="flex items-center justify-center">
+                  <a href="https://althausdigital.co.uk" rel="noopener noreferrer" target="_blank" className="btn btn--pink inline-block">
+                    <span className="block relative z-20">Visit our UK website</span>
+                  </a>
+                </div>
+              </div>
+
             </section>
             
             <Footer/>
