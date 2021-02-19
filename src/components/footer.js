@@ -93,7 +93,7 @@ const Footer = ({ contactPage }) => {
 
             <div className="w-full md:w-auto md:ml-auto md:text-right">
               {/* <a href={`tel:${ telephone }`} className="text-white font-semibold block hover:opacity-50 focus:opacity-50">T: { telephone }</a> */}
-              <a href={`mailto:${ emailAddress }`} className="text-white font-semibold block hover:opacity-50 focus:opacity-50">E: { emailAddress }</a>
+              <a href={`mailto:info@althausdigital.co.nz`} className="text-white font-semibold block hover:opacity-50 focus:opacity-50">E: info@althausdigital.co.nz</a>
             </div>
           </div>
           
